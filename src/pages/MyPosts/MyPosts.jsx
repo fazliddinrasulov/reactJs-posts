@@ -29,6 +29,9 @@ const MyPosts = () => {
       setIsOpenModal(false);
     }
   };
+  useEffect(() => {
+    setRender(!render);
+  }, []);
   return (
     <div className="container ">
       <Modal>
