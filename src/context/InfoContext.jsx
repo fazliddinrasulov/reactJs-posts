@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const InfoContext = createContext();
 
@@ -32,12 +33,16 @@ const InfoContextProvider = ({ children }) => {
   };
   const getMyPost = async () => {
     try {
+      toast.loading("please wait...");
       const resp = await axios.get(`${baseUrl}my`, {
         headers: { access_token: localStorage.getItem("access_toke") },
       });
       setMyPost(resp.data);
+      toast.dismiss();
     } catch (error) {
       console.log(error);
+      toast.dismiss();
+      toast.error("something went wrong");
     }
   };
   const value = {
