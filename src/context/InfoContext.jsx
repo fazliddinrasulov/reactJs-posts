@@ -17,6 +17,7 @@ const InfoContextProvider = ({ children }) => {
   const [posts, setPosts] = useState(null);
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [myPost, setMyPost] = useState(null);
+  const [render, setRender] = useState(false);
 
   const logout = () => {
     setCurrentUser(null);
@@ -59,11 +60,13 @@ const InfoContextProvider = ({ children }) => {
     getPosts,
     getMyPost,
     myPost,
+    setRender,
+    render,
   };
   useEffect(() => {
     getPosts();
     getMyPost();
-  }, []);
+  }, [render]);
   return <InfoContext.Provider value={value}>{children}</InfoContext.Provider>;
 };
 

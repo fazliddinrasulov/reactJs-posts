@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import Post from "../../components/Post";
 
 const MyPosts = () => {
-  const { setIsOpenModal, baseUrl, myPost } = useInfoContext();
+  const { setIsOpenModal, baseUrl, myPost, setRender, render } = useInfoContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +21,7 @@ const MyPosts = () => {
       toast.dismiss();
       toast.success(resp.data);
       setIsOpenModal(false);
+      setRender(!render);
     } catch (error) {
       console.log(error);
       toast.dismiss();
