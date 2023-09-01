@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./MyPosts.css";
 import Modal from "../../components/Modal";
 import { useInfoContext } from "../../context/InfoContext";

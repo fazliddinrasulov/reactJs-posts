@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import SinglePost from "./pages/SinglePost/SinglePost";
 import MyPosts from "./pages/MyPosts/MyPosts";
 import Footer from "./components/Footer";
+import Unsplash from "./pages/Unsplash/Unsplash";
 
 function App() {
   const { currentUser } = useInfoContext();
@@ -22,6 +23,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/posts/:id" element={<SinglePost />} />
         <Route path="/myposts" element={<MyPosts />} />
+        <Route path="/unsplash" element={<Unsplash />} />
 
         <Route path="/*" element={<Error />} />
       </Routes>

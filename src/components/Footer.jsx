@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-distributed">
       <div className="footer-left">
         <h3>
-          Company<span>logo</span>
+          <span>logo</span>
         </h3>
 
         <p className="footer-links">

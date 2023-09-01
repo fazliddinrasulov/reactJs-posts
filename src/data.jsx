@@ -14,4 +14,9 @@ export const links = [
     url: "/myposts",
     text: "my posts",
   },
+  {
+    id: 4,
+    url: "/unsplash",
+    text: "gallery",
+  },
 ];
