@@ -39,7 +39,7 @@ const Unsplash = () => {
   return (
     <main>
       <div className="posts">
-        {images.map((item, index) => {
+        {images?.map((item, index) => {
           return <Post key={index} {...item} />;
         })}
       </div>
